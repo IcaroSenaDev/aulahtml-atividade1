@@ -1,0 +1,153 @@
+body {
+    background-image: url('midia.jpg');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz a imagem ficar fixa enquanto você rola a página */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative; /* Necessário para o overlay */
+}
+
+/* Criando uma camada semi-transparente sobre a imagem */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0); /* Ajuste a cor e a transparência aqui */
+    z-index: 1;
+}
+
+/* Ajustando o conteúdo para ficar acima do overlay */
+body > * {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255); /* Para garantir que o texto seja visível */
+}
+
+
+header {
+    background-image: url('images.jpg');
+    color: rgb(255, 255, 255);
+    padding: 1px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-image: url('midia.jpg');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2b2d96;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Centraliza o iframe */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    position: relative;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 600px; /* Define uma largura máxima */
+    max-height: 338px; /* Define uma altura máxima */
+}
+
+.marquee-text {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.marquee-text h1, .marquee-text h2 {
+    margin: 0;
+}
+
+.login-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 30px auto;
+    color: white;
+    text-align: center;
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+}
+
+.login-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2b2d96;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #1a1b8f;
+}
